@@ -1,4 +1,4 @@
-package com.zerobeatapp
+package com.zerobeat
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

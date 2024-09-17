@@ -29,10 +29,13 @@ module.exports = {
       {
         moduleName: '@env',
         path: '.env',
-        blacklist: null,
-        whitelist: null,
-        safe: false,
-        allowUndefined: true,
+				"blocklist": null,
+				"allowlist": null,
+				"blacklist": null, 
+				"whitelist": null, 
+				"safe": false,
+				"allowUndefined": true,
+				"verbose": false
       },
     ],
   ],

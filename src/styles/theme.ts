@@ -1,5 +1,3 @@
-import { Pointer } from 'lucide-react-native';
-
 const colors = {
   darkGray: '#1a1a1a',
   mediumGray: '#2a2a2a',

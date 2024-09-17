@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import { MainTabParamList } from '../navigation/AppNavigator';
 import { theme } from '@/styles/theme';
 import Scroll from '@/components/common/ScrollWrap';
 
-type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, '프로필'>;
+type HomeScreenNavigationProp = NativeStackNavigationProp<MainTabParamList, '프로필'>;
 
 type Props = {
   navigation: HomeScreenNavigationProp;
