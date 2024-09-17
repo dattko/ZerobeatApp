@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ZerobeatAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ZerobeatAppTests.m */; };
+		00E356F31AD99517003FC87E /* zerobeatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* zerobeatTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3994E391753DFE4876E83285 /* libPods-ZerobeatApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE73B3A7E265C1819440E03 /* libPods-ZerobeatApp.a */; };
-		528574E8D80690717CF2E1DE /* libPods-ZerobeatApp-ZerobeatAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C53F6BAC7661B65CBAF6193 /* libPods-ZerobeatApp-ZerobeatAppTests.a */; };
+		3994E391753DFE4876E83285 /* libPods-zerobeat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FE73B3A7E265C1819440E03 /* libPods-zerobeat.a */; };
+		528574E8D80690717CF2E1DE /* libPods-zerobeat-zerobeatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C53F6BAC7661B65CBAF6193 /* libPods-zerobeat-zerobeatTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		E0F6D3C06A07DD7DDE365472 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 4B27EAE265B8F134003A290D /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
@@ -23,29 +23,29 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ZerobeatApp;
+			remoteInfo = "zerobeat";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* ZerobeatAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZerobeatAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* zerobeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zerobeatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ZerobeatAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZerobeatAppTests.m; sourceTree = "<group>"; };
-		107ECC1AE506FCF606CCB6D0 /* Pods-ZerobeatApp-ZerobeatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZerobeatApp-ZerobeatAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ZerobeatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZerobeatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ZerobeatApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = ZerobeatApp/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZerobeatApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZerobeatApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ZerobeatApp/main.m; sourceTree = "<group>"; };
-		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = ZerobeatApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		3BA05F12C4159447C7F4C707 /* Pods-ZerobeatApp-ZerobeatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZerobeatApp-ZerobeatAppTests.release.xcconfig"; path = "Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		4B27EAE265B8F134003A290D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ZerobeatApp/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		6FE73B3A7E265C1819440E03 /* libPods-ZerobeatApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZerobeatApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZerobeatApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8C53F6BAC7661B65CBAF6193 /* libPods-ZerobeatApp-ZerobeatAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZerobeatApp-ZerobeatAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0BDA075B61C7EAFA1A12150 /* Pods-ZerobeatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZerobeatApp.release.xcconfig"; path = "Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp.release.xcconfig"; sourceTree = "<group>"; };
-		A31EA0E67A0DA594DC5D6A89 /* Pods-ZerobeatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZerobeatApp.debug.xcconfig"; path = "Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* zerobeatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "zerobeatTests.m"; sourceTree = "<group>"; };
+		107ECC1AE506FCF606CCB6D0 /* Pods-zerobeat-zerobeatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zerobeat-zerobeatTests.debug.xcconfig"; path = "Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* zerobeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zerobeat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "zerobeat/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "zerobeat/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "zerobeat/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "zerobeat/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "zerobeat/main.m"; sourceTree = "<group>"; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = zerobeat/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		3BA05F12C4159447C7F4C707 /* Pods-zerobeat-zerobeatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zerobeat-zerobeatTests.release.xcconfig"; path = "Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B27EAE265B8F134003A290D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = zerobeat/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6FE73B3A7E265C1819440E03 /* libPods-zerobeat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zerobeat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "zerobeat/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		8C53F6BAC7661B65CBAF6193 /* libPods-zerobeat-zerobeatTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-zerobeat-zerobeatTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0BDA075B61C7EAFA1A12150 /* Pods-zerobeat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zerobeat.release.xcconfig"; path = "Target Support Files/Pods-zerobeat/Pods-zerobeat.release.xcconfig"; sourceTree = "<group>"; };
+		A31EA0E67A0DA594DC5D6A89 /* Pods-zerobeat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zerobeat.debug.xcconfig"; path = "Target Support Files/Pods-zerobeat/Pods-zerobeat.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528574E8D80690717CF2E1DE /* libPods-ZerobeatApp-ZerobeatAppTests.a in Frameworks */,
+				528574E8D80690717CF2E1DE /* libPods-zerobeat-zerobeatTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,20 +62,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3994E391753DFE4876E83285 /* libPods-ZerobeatApp.a in Frameworks */,
+				3994E391753DFE4876E83285 /* libPods-zerobeat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* ZerobeatAppTests */ = {
+		00E356EF1AD99517003FC87E /* zerobeatTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ZerobeatAppTests.m */,
+				00E356F21AD99517003FC87E /* zerobeatTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ZerobeatAppTests;
+			path = "zerobeatTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -86,7 +86,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* ZerobeatApp */ = {
+		13B07FAE1A68108700A75B9A /* zerobeat */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -98,15 +98,15 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				4B27EAE265B8F134003A290D /* PrivacyInfo.xcprivacy */,
 			);
-			name = ZerobeatApp;
+			name = "zerobeat";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6FE73B3A7E265C1819440E03 /* libPods-ZerobeatApp.a */,
-				8C53F6BAC7661B65CBAF6193 /* libPods-ZerobeatApp-ZerobeatAppTests.a */,
+				6FE73B3A7E265C1819440E03 /* libPods-zerobeat.a */,
+				8C53F6BAC7661B65CBAF6193 /* libPods-zerobeat-zerobeatTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,9 +121,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* ZerobeatApp */,
+				13B07FAE1A68108700A75B9A /* zerobeat */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ZerobeatAppTests */,
+				00E356EF1AD99517003FC87E /* zerobeatTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -136,8 +136,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ZerobeatApp.app */,
-				00E356EE1AD99517003FC87E /* ZerobeatAppTests.xctest */,
+				13B07F961A680F5B00A75B9A /* zerobeat.app */,
+				00E356EE1AD99517003FC87E /* zerobeatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,10 +145,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A31EA0E67A0DA594DC5D6A89 /* Pods-ZerobeatApp.debug.xcconfig */,
-				A0BDA075B61C7EAFA1A12150 /* Pods-ZerobeatApp.release.xcconfig */,
-				107ECC1AE506FCF606CCB6D0 /* Pods-ZerobeatApp-ZerobeatAppTests.debug.xcconfig */,
-				3BA05F12C4159447C7F4C707 /* Pods-ZerobeatApp-ZerobeatAppTests.release.xcconfig */,
+				A31EA0E67A0DA594DC5D6A89 /* Pods-zerobeat.debug.xcconfig */,
+				A0BDA075B61C7EAFA1A12150 /* Pods-zerobeat.release.xcconfig */,
+				107ECC1AE506FCF606CCB6D0 /* Pods-zerobeat-zerobeatTests.debug.xcconfig */,
+				3BA05F12C4159447C7F4C707 /* Pods-zerobeat-zerobeatTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ZerobeatAppTests */ = {
+		00E356ED1AD99517003FC87E /* zerobeatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ZerobeatAppTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "zerobeatTests" */;
 			buildPhases = (
 				81D831CCECEA0089E5BFCDB7 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -172,14 +172,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ZerobeatAppTests;
-			productName = ZerobeatAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* ZerobeatAppTests.xctest */;
+			name = "zerobeatTests";
+			productname = "zerobeatTests";
+			productReference = 00E356EE1AD99517003FC87E /* zerobeatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ZerobeatApp */ = {
+		13B07F861A680F5B00A75B9A /* zerobeat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ZerobeatApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "zerobeat" */;
 			buildPhases = (
 				E2033016AB9F2341466C0B5C /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -193,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = ZerobeatApp;
-			productName = ZerobeatApp;
-			productReference = 13B07F961A680F5B00A75B9A /* ZerobeatApp.app */;
+			name = "zerobeat";
+			productName = "zerobeat";
+			productReference = 13B07F961A680F5B00A75B9A /* zerobeat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ZerobeatApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "zerobeat" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ZerobeatApp */,
-				00E356ED1AD99517003FC87E /* ZerobeatAppTests */,
+				13B07F861A680F5B00A75B9A /* zerobeat */,
+				00E356ED1AD99517003FC87E /* zerobeatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,7 +287,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZerobeatApp-ZerobeatAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-zerobeat-zerobeatTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -300,15 +300,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A52F031AA945A9356DBC52AE /* [CP] Embed Pods Frameworks */ = {
@@ -317,15 +317,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat/Pods-zerobeat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat/Pods-zerobeat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zerobeat/Pods-zerobeat-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBAA2BF3858CB895346F2BAE /* [CP] Copy Pods Resources */ = {
@@ -334,15 +334,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat/Pods-zerobeat-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat/Pods-zerobeat-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp/Pods-ZerobeatApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zerobeat/Pods-zerobeat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2033016AB9F2341466C0B5C /* [CP] Check Pods Manifest.lock */ = {
@@ -360,7 +360,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZerobeatApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-zerobeat-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,15 +373,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZerobeatApp-ZerobeatAppTests/Pods-ZerobeatApp-ZerobeatAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zerobeat-zerobeatTests/Pods-zerobeat-zerobeatTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -391,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ZerobeatAppTests.m in Sources */,
+				00E356F31AD99517003FC87E /* zerobeatTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +409,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ZerobeatApp */;
+			target = 13B07F861A680F5B00A75B9A /* zerobeat */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -417,14 +417,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 107ECC1AE506FCF606CCB6D0 /* Pods-ZerobeatApp-ZerobeatAppTests.debug.xcconfig */;
+			baseConfigurationReference = 107ECC1AE506FCF606CCB6D0 /* Pods-zerobeat-zerobeatTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = ZerobeatAppTests/Info.plist;
+				INFOPLIST_FILE = "zerobeatTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,17 +438,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZerobeatApp.app/ZerobeatApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zerobeat.app/zerobeat";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BA05F12C4159447C7F4C707 /* Pods-ZerobeatApp-ZerobeatAppTests.release.xcconfig */;
+			baseConfigurationReference = 3BA05F12C4159447C7F4C707 /* Pods-zerobeat-zerobeatTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = ZerobeatAppTests/Info.plist;
+				INFOPLIST_FILE = "zerobeatTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -462,13 +462,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZerobeatApp.app/ZerobeatApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zerobeat.app/zerobeat";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A31EA0E67A0DA594DC5D6A89 /* Pods-ZerobeatApp.debug.xcconfig */;
+			baseConfigurationReference = A31EA0E67A0DA594DC5D6A89 /* Pods-zerobeat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -477,7 +477,8 @@
 				DEVELOPMENT_TEAM = GF838BMADT;
 				ENABLE_BITCODE = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = ZerobeatApp/Info.plist;
+				INFOPLIST_FILE = "zerobeat/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "zerobeat";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,7 +490,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mins.zerobeat;
-				PRODUCT_NAME = ZerobeatApp;
+				PRODUCT_NAME = "zerobeat";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -498,7 +499,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0BDA075B61C7EAFA1A12150 /* Pods-ZerobeatApp.release.xcconfig */;
+			baseConfigurationReference = A0BDA075B61C7EAFA1A12150 /* Pods-zerobeat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +507,8 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = GF838BMADT;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				INFOPLIST_FILE = ZerobeatApp/Info.plist;
+				INFOPLIST_FILE = "zerobeat/Info.plist";
+             INFOPLIST_KEY_CFBundleDisplayName = "zerobeat";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -518,7 +520,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mins.zerobeat;
-				PRODUCT_NAME = ZerobeatApp;
+				PRODUCT_NAME = "zerobeat";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -693,7 +695,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ZerobeatAppTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "zerobeatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -702,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ZerobeatApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "zerobeat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -711,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ZerobeatApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "zerobeat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
