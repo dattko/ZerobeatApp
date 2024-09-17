@@ -5,6 +5,7 @@ import {
   View,
   StatusBar,
   StyleSheet,
+  ScrollView,
   useColorScheme,
 } from 'react-native';
 import { theme } from '@/styles/theme';
@@ -24,10 +25,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     <ThemeProvider theme={theme}>
       <SafeAreaView style={[styles.container, backgroundStyle]}>
         <StatusBar
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          // barStyle={isDarkMode ? 'light-content' : 'dark-content'}
           backgroundColor={backgroundStyle.backgroundColor}
         />
-        <View style={styles.wrap}>
+        <View style={styles.contentWrap}>
           {children}
         </View>
       </SafeAreaView>
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  wrap: {
+  contentWrap: {
     flexGrow: 1,
     backgroundColor: theme.colors.mediumGray,
   },

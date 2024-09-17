@@ -1,3 +1,5 @@
+import { Pointer } from 'lucide-react-native';
+
 const colors = {
   darkGray: '#1a1a1a',
   mediumGray: '#2a2a2a',
@@ -7,6 +9,7 @@ const colors = {
   white: '#ffffff',
   black: '#000000',
   spotify: '#1DB954',
+  Point: '#E4003A'
 };
 
 const fontSizes = {
@@ -24,10 +27,13 @@ const spacing = {
   lg: 24,
 };
 
+
 export const theme = {
   colors,
   fontSizes,
   spacing,
 };
+
+
 
 export type Theme = typeof theme;

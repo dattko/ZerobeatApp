@@ -1,4 +1,4 @@
-package com.zerobeatapp
+package com.zerobeat
 
 import android.app.Application
 import com.facebook.react.PackageList

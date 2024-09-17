@@ -1,20 +1,20 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 import { theme } from '@/styles/theme';
-import Scroll from '@components/common/ScrollWrap';
+import Scroll from '@/components/common/ScrollWrap';
 
-type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, '홈'>;
+type HomeScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, '프로필'>;
 
 type Props = {
   navigation: HomeScreenNavigationProp;
 };
 
-const HomeScreen = ({ navigation }: Props) => {
+const ProfileScreen = ({ navigation }: Props) => {
   return (
     <Scroll>
-      <Text>Home Screen</Text>
+      <Text>profile Screen</Text>
       {/* <Button
         title="Go to Profile"
         onPress={() => navigation.navigate('Profile')} // 예시로 navigation을 추가했습니다.
@@ -25,9 +25,10 @@ const HomeScreen = ({ navigation }: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 16,
-    backgroundColor: theme.colors.mediumGray,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
-export default HomeScreen;
+export default ProfileScreen;
