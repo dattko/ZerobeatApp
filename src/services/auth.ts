@@ -1,10 +1,10 @@
 import { authorize, refresh, AuthorizeResult } from 'react-native-app-auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_REDIRECT_URI } from '@env';
+import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI } from '@env';
 
-const spotifyAuthConfig = {
+console.log(SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI);
+const Config = {
   clientId: SPOTIFY_CLIENT_ID,
-  clientSecret: SPOTIFY_CLIENT_SECRET,
   redirectUrl: SPOTIFY_REDIRECT_URI,
   scopes: [
     'user-read-email',
@@ -27,33 +27,39 @@ const spotifyAuthConfig = {
     authorizationEndpoint: 'https://accounts.spotify.com/authorize',
     tokenEndpoint: 'https://accounts.spotify.com/api/token',
   },
+  usePKCE: true, // PKCE 사용 설정
 };
 
 // 로그인 함수
 export const login = async (): Promise<AuthorizeResult | null> => {
   try {
-    const result = await authorize(spotifyAuthConfig);
+    const result = await authorize(Config);
+    console.log('Spotify auth result:', result); // Spotify API 응답 확인
+
+    // 토큰 정보 저장
     await AsyncStorage.setItem('spotifyAccessToken', result.accessToken);
-    await AsyncStorage.setItem('spotifyRefreshToken', result.refreshToken);
+    await AsyncStorage.setItem('spotifyRefreshToken', result.refreshToken || '');
     await AsyncStorage.setItem('spotifyTokenExpirationDate', result.accessTokenExpirationDate);
+
     return result;
   } catch (error) {
-    console.error('Login error:', error);
+    console.error('Login error in login function:', error); // 에러 로그 추가
     return null;
   }
 };
+
 
 // 토큰 가져오기 함수
 export const getAccessToken = async (): Promise<string | null> => {
   try {
     const token = await AsyncStorage.getItem('spotifyAccessToken');
     const expirationDate = await AsyncStorage.getItem('spotifyTokenExpirationDate');
-    
+
     if (!token || !expirationDate) {
       return null;
     }
 
-    if (new Date(expirationDate) < new Date()) {
+    if (new Date(expirationDate) <= new Date()) {
       // 토큰이 만료되었으면 갱신
       return await refreshTokens();
     }
@@ -73,13 +79,13 @@ const refreshTokens = async (): Promise<string | null> => {
       throw new Error('No refresh token available');
     }
 
-    const newAuthState = await refresh(spotifyAuthConfig, {
+    const newAuthState = await refresh(Config, {
       refreshToken,
     });
 
     // 새로 갱신된 토큰을 저장
     await AsyncStorage.setItem('spotifyAccessToken', newAuthState.accessToken);
-    await AsyncStorage.setItem('spotifyRefreshToken', newAuthState.refreshToken || refreshToken); // 만약 갱신된 리프레시 토큰이 없으면 기존 토큰 사용
+    await AsyncStorage.setItem('spotifyRefreshToken', newAuthState.refreshToken || refreshToken);
     await AsyncStorage.setItem('spotifyTokenExpirationDate', newAuthState.accessTokenExpirationDate);
 
     return newAuthState.accessToken;
@@ -96,7 +102,7 @@ export const logout = async (): Promise<void> => {
     await AsyncStorage.removeItem('spotifyRefreshToken');
     await AsyncStorage.removeItem('spotifyTokenExpirationDate');
   } catch (error) {
-    console.error('로그인 실패 :', error);
+    console.error('로그아웃 실패 :', error);
   }
 };
 
@@ -110,7 +116,8 @@ export const checkPremiumStatus = async (accessToken: string): Promise<boolean> 
     });
 
     if (!response.ok) {
-      console.warn(`HTTP error when checking premium status: ${response.status}`);
+      const errorData = await response.json();
+      console.warn(`HTTP error when checking premium status: ${response.status} - ${errorData.error.message}`);
       return false;
     }
 
