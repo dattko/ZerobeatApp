@@ -1,16 +1,15 @@
-
 import React from 'react';
 import MainLayout from '@components/layouts/MainLayout';
-import AppNavigator from '@navigation/AppNavigator';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
+import { store } from '@/store';
 
 function App(): React.JSX.Element {
-
   return (
     <SafeAreaProvider>
-      <MainLayout>
-        <AppNavigator />
-      </MainLayout>
+      <Provider store={store}>
+        <MainLayout />
+      </Provider>
     </SafeAreaProvider>
   );
 }

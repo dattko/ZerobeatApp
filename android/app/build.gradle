@@ -74,7 +74,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
     ndkVersion rootProject.ext.ndkVersion
-    buildToolsVersion '33.0.1'
+    compileSdkVersion 35
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.zerobeat"

@@ -9,6 +9,7 @@ import { theme } from '@/styles/theme';
     scrollWrap: {
       padding: 16,
       backgroundColor: theme.colors.mediumGray,
+      borderWidth: 1,
     },
   });
 

@@ -1,8 +1,9 @@
-import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI } from '@env';
+import { SPOTIFY_CLIENT_ID, ANDROID_REDIRECT_URI, IOS_REDIRECT_URI } from '@env';
+import { Platform } from 'react-native';
 
 export const Config = {
   clientId: SPOTIFY_CLIENT_ID,
-  redirectUrl: SPOTIFY_REDIRECT_URI,
+  redirectUrl: Platform.OS === 'ios' ? IOS_REDIRECT_URI : ANDROID_REDIRECT_URI,
   scopes: [
     'user-read-email',
     'user-read-recently-played',

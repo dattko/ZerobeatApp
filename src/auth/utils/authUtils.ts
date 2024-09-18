@@ -1,49 +1,52 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { STORAGE_KEYS } from '@/auth/config/authConstans';
+import * as Keychain from 'react-native-keychain';
+
+interface TokenData {
+  accessToken: string;
+  refreshToken: string;
+  expirationDate: string;
+}
 
 export const saveTokens = async (accessToken: string, refreshToken: string, expirationDate: string): Promise<void> => {
   try {
-    await AsyncStorage.multiSet([
-      [STORAGE_KEYS.ACCESS_TOKEN, accessToken],
-      [STORAGE_KEYS.REFRESH_TOKEN, refreshToken],
-      [STORAGE_KEYS.TOKEN_EXPIRATION_DATE, expirationDate],
-    ]);
+    const tokenData: TokenData = { accessToken, refreshToken, expirationDate };
+    await Keychain.setGenericPassword('authTokens', JSON.stringify(tokenData));
   } catch (error) {
     console.error('Error saving tokens:', error);
     throw error;
   }
 };
 
-export const getStoredAccessToken = async (): Promise<string | null> => {
+export const getStoredTokens = async (): Promise<TokenData | null> => {
   try {
-    return await AsyncStorage.getItem(STORAGE_KEYS.ACCESS_TOKEN);
+    const credentials = await Keychain.getGenericPassword();
+    if (credentials) {
+      return JSON.parse(credentials.password) as TokenData;
+    }
+    return null;
   } catch (error) {
-    console.error('Error getting access token:', error);
+    console.error('Error getting stored tokens:', error);
     return null;
   }
+};
+
+export const getStoredAccessToken = async (): Promise<string | null> => {
+  const tokens = await getStoredTokens();
+  return tokens ? tokens.accessToken : null;
 };
 
 export const getStoredRefreshToken = async (): Promise<string | null> => {
-  try {
-    return await AsyncStorage.getItem(STORAGE_KEYS.REFRESH_TOKEN);
-  } catch (error) {
-    console.error('Error getting refresh token:', error);
-    return null;
-  }
+  const tokens = await getStoredTokens();
+  return tokens ? tokens.refreshToken : null;
 };
 
 export const getStoredExpirationDate = async (): Promise<string | null> => {
-  try {
-    return await AsyncStorage.getItem(STORAGE_KEYS.TOKEN_EXPIRATION_DATE);
-  } catch (error) {
-    console.error('Error getting token expiration date:', error);
-    return null;
-  }
+  const tokens = await getStoredTokens();
+  return tokens ? tokens.expirationDate : null;
 };
 
 export const clearTokens = async (): Promise<void> => {
   try {
-    await AsyncStorage.multiRemove(Object.values(STORAGE_KEYS));
+    await Keychain.resetGenericPassword();
   } catch (error) {
     console.error('Error clearing tokens:', error);
     throw error;

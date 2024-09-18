@@ -23,11 +23,5 @@ const HomeScreen = ({ navigation }: Props) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    padding: 16,
-    backgroundColor: theme.colors.mediumGray,
-  },
-});
 
 export default HomeScreen;
