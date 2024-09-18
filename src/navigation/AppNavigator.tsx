@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -8,6 +8,8 @@ import ProfileScreen from '@screens/ProfileScreen';
 import LoginScreen from '@screens/auth/LoginScreen';
 import { theme } from '@/styles/theme';
 import { HomeIcon, Library } from 'lucide-react-native';
+import { getAccessToken } from '@/auth/auth';
+import { Text } from 'react-native';
 
 export type RootStackParamList = {
   Auth: undefined;
@@ -71,14 +73,35 @@ const AuthNavigator = () => (
 );
 
 const AppNavigator = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      const token = await getAccessToken();
+      setIsLoggedIn(!!token);
+      setIsLoading(false);
+    };
+
+    checkLoginStatus();
+  }, []);
+
+  if (isLoading) {
+    // 로딩 화면 표시
+    return <Text>Loading...</Text>;
+  }
+
+
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Auth" component={AuthNavigator} />
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      {isLoggedIn ? (
         <Stack.Screen name="Main" component={MainNavigator} />
-      </Stack.Navigator>
-    </NavigationContainer>
+      ) : (
+        <Stack.Screen name="Auth" component={AuthNavigator} />
+      )}
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 };
 

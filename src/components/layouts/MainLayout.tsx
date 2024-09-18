@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { theme } from '@/styles/theme';
 
+
 interface MainLayoutProps {
   children?: React.ReactNode;
 }

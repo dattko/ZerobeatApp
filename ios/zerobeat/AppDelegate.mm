@@ -14,15 +14,22 @@
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
-- (BOOL) application: (UIApplication *)application
-             openURL: (NSURL *)url
-             options: (NSDictionary<UIApplicationOpenURLOptionsKey, id> *) options
+- (BOOL)application:(UIApplication *)application
+             openURL:(NSURL *)url
+             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
+  // URL이 올바르게 전달되는지 로그로 확인
+  NSLog(@"Open URL: %@", url);
+
   if ([self.authorizationFlowManagerDelegate resumeExternalUserAgentFlowWithURL:url]) {
+    NSLog(@"Spotify authorization flow resumed successfully");
     return YES;
   }
+  
+  // RCTLinkingManager가 URL을 처리하도록 설정
   return [RCTLinkingManager application:application openURL:url options:options];
 }
+
 
 - (BOOL) application: (UIApplication *) application
 continueUserActivity: (nonnull NSUserActivity *)userActivity

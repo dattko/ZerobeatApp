@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { login } from '@services/auth';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';import { login } from '@/auth/auth';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '@/navigation/AppNavigator';
 import { theme } from '@/styles/theme';
@@ -21,18 +20,14 @@ const LoginScreen = ({ navigation } : Props) => {
     try {
       const result = await login();
       console.log('Login result:', result); 
-      if (result) {
+      if (result && result.accessToken) {  // accessToken의 존재 여부로
         console.log('Login successful, navigating to Main');
-        navigation.reset({
-          index: 0,
-          routes: [{ name: 'Main' }],
-        });
       } else {
         setError('Login failed. Please try again.');
-        console.log('Login failed with no result.');
+        console.log('Login failed with no valid result.');
       }
     } catch (error) {
-      console.error('Login failed with error:', error); // 에러 메시지 출력
+      console.error('Login failed with error:', error); 
       setError('An error occurred. Please try again.');
     } finally {
       setIsLoading(false);
@@ -50,7 +45,7 @@ const LoginScreen = ({ navigation } : Props) => {
         disabled={isLoading}
       >
         <Text style={styles.loginButtonText}>
-          {isLoading ? 'Logging in...' : 'Login with Spotify'}
+          {isLoading ? '로그인 중...' : '로그인'}
         </Text>
       </TouchableOpacity>
       {error && <Text style={styles.errorText}>{error}</Text>}

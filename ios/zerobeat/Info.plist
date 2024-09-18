@@ -27,7 +27,7 @@
     <string>com.zerobeat</string>
     <key>CFBundleURLSchemes</key>
     <array>
-      <string>zerobeat</string>
+      <string>com.zerobeat</string>
     </array>
   </dict>
 </array>

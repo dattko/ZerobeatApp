@@ -24,6 +24,7 @@
     "react-native-safe-area-context": "^4.11.0",
     "react-native-screens": "^3.34.0",
     "react-native-svg": "^15.6.0",
+    "react-native-webview": "^13.12.2",
     "react-redux": "^9.1.2",
     "styled-components": "^6.1.13"
   },
@@ -52,5 +53,9 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "description": "This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
