@@ -42,7 +42,7 @@ const LoginScreen = ({ navigation }: Props) => {
           {isLoading ? '로그인 중...' : '로그인'}
         </Text>
       </TouchableOpacity>
-      {error && <Text style={styles.errorText}>{error}</Text>}
+      {/* {error && <Text style={styles.errorText}>{error}</Text>} */}
     </View>
   );
 };

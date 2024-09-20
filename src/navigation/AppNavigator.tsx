@@ -39,7 +39,8 @@ const MainNavigator = () => (
         backgroundColor: theme.colors.darkGray,
         height: 56,
         paddingBottom: 0,
-        paddingTop: 4,
+        paddingTop: 0,
+        borderColor: theme.colors.lightGray,
       },
       tabBarItemStyle: {
         justifyContent: 'center',
