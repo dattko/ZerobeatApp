@@ -1,13 +1,18 @@
-import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
-import { Text } from '@text';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '@/store/slice/authSlice'; 
-import { AppDispatch, RootState } from '@/store'; 
+import { logout } from '@/store/slice/authSlice';
+import { AppDispatch, RootState } from '@/store';
+import { LogOut, User } from 'lucide-react-native';
+import { theme } from '@/styles/theme';
+import { fetchUserProfile } from '@/api/userApi'; 
+import { getStoredAccessToken } from '@/auth';
+import { Image } from 'react-native';
+import { TextMD, TextSM } from '@text';
 
 const HeaderContainer = styled.View`
-  height: 46px;
+  height: 54px;
   flex-direction: row;
   align-items: center;
   padding: 0 16px;
@@ -27,6 +32,7 @@ const HeaderContent = styled.View`
 const Header: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { isLoading, error } = useSelector((state: RootState) => state.auth);
+  const [userProfile, setUserProfile] = useState<any>(null);
 
   const handleLogout = async () => {
     try {
@@ -37,21 +43,73 @@ const Header: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const loadUserProfile = async () => {
+      const accessToken = await getStoredAccessToken(); // 저장된 액세스 토큰 가져오기
+      if (accessToken) {
+        try {
+          const profile = await fetchUserProfile(accessToken);
+          setUserProfile(profile);
+        } catch (error) {
+          console.error('Failed to fetch user profile:', error);
+        }
+      }
+    };
+
+    loadUserProfile();
+  }, []);
+
   return (
     <HeaderContainer>
       <View>
-        <Text>ZeroBeat</Text>
+        <TextMD>ZeroBeat</TextMD>
       </View>
       <HeaderContent>
-        <Text>서치</Text>
-        <Text>프로필</Text>
-        <TouchableOpacity onPress={handleLogout} disabled={isLoading}>
-          <Text>{isLoading ? '로그아웃 중...' : '로그아웃'}</Text>
-        </TouchableOpacity>
+        <TextMD>서치</TextMD>
+        <View>
+          <View style={styles.profileBox}>
+            <View style={styles.profile}>
+              {userProfile?.images?.[0].url  ? (
+                  <Image
+                  source={{ uri: userProfile?.images?.[0].url }}
+                  style={{
+                    width: 32,
+                    height: 32,
+                    borderRadius: 16,
+                  }}
+                />
+              ) : (
+                <User color={theme.colors.gray} size={18}/>
+              )}
+            </View>
+            {/* <TextSM>{userProfile?.display_name}</TextSM> */}
+            <TouchableOpacity onPress={handleLogout} disabled={isLoading}>
+              <LogOut color={theme.colors.gray} size={18}/>
+            </TouchableOpacity>
+          </View>
+        </View>
       </HeaderContent>
-      {error && <Text >{error}</Text>}
+      {error && <TextMD>{error}</TextMD>}
     </HeaderContainer>
   );
 };
+
+const styles = StyleSheet.create({
+    profileBox: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+    },
+    profile: {
+      borderRadius: 16,
+      alignItems: 'center',
+      width: 32,
+      height: 32,
+      borderWidth: 1,
+      borderColor: theme.colors.gray,
+      justifyContent: 'center',
+      backgroundColor: theme.colors.lightGray,
+    },
+});
 
 export default Header;

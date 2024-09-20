@@ -32,7 +32,7 @@ const MainLayout: React.FC = () => {
     <ThemeProvider theme={theme}>
       <SafeAreaView style={[styles.container, backgroundStyle]}>
         <StatusBar
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          barStyle={isDarkMode ? 'light-content' : 'default'}
           backgroundColor={backgroundStyle.backgroundColor}
         />
         <View style={styles.contentWrap}>

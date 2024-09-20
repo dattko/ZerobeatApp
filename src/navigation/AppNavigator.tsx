@@ -24,7 +24,7 @@ export type AuthStackParamList = {
 
 export type MainTabParamList = {
   홈: undefined;
-  프로필: undefined;
+  라이브러리: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -59,7 +59,7 @@ const MainNavigator = () => (
       }}
     />
     <Tab.Screen 
-      name="프로필" 
+      name="라이브러리" 
       component={ProfileScreen} 
       options={{
         tabBarIcon: ({ color }) => <Library size={16} color={color} />
