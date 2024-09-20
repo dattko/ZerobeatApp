@@ -21,16 +21,23 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleURLName</key>
-    <string>com.zerobeat</string>
-    <key>CFBundleURLSchemes</key>
-    <array>
-      <string>com.zerobeat</string>
-    </array>
-  </dict>
-</array>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.zerobeat</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.zerobeat</string>
+			</array>
+		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SUITE-Light.ttf</string>
+		<string>SUITE-Regular.ttf</string>
+		<string>SUITE-Semibold.ttf</string>
+		<string>SUITE-Bold.ttf</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>

@@ -26,3 +26,7 @@ export const TextXL: React.FC<Omit<TextProps, 'size'>> = (props) => (
 export const TextXXL: React.FC<Omit<TextProps, 'size'>> = (props) => (
   <BaseText size="xxl" {...props} />
 );
+
+export const Error: React.FC<Omit<TextProps, 'size'>> = (props) => (
+  <BaseText size="md" color='red' {...props} />
+);
