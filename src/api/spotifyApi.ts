@@ -95,8 +95,16 @@ export async function getNewReleases(limit: number = 20, offset: number = 0, cou
   return fetchSpotifyAPI(endpoint);
 }
 
-export async function getPopularTracks() {
-  return fetchSpotifyAPI('/playlists/37i9dQZEVXbMDoHDwVN2tF');
+export async function getCountryPopularTracks(countryCode: string) {
+  const playlistIds: { [key: string]: string } = {
+    KR: '37i9dQZEVXbNfM2w2mq1B8', // 한국
+    US: '37i9dQZEVXbLRQDuF5jeBp', // 미국
+    JP: '37i9dQZEVXbKXQ4mDTEBXq', // 일본
+    // 필요에 따라 다른 국가 코드와 플레이리스트 ID를 추가할 수 있습니다.
+  };
+
+  const playlistId = playlistIds[countryCode] || '37i9dQZEVXbMDoHDwVN2tF'; // 기본값은 글로벌 차트
+  return fetchSpotifyAPI(`/playlists/${playlistId}`);
 }
 
 export async function getFeaturedPlaylists() {

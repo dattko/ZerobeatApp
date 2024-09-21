@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 // import GradientSectionTitle from '@component/layouts/gradientTitle/GradientSectionTitle';
 // import PlayTrack from './PlayTrack';
 // import SpotifyTrackMenu from '../spotifyTrackMenu/SpotifyTrackMenu';
-import { Text , TextXL, Error, TextSM, TextXS} from '../typography/Typography';
+import { Text , TextXL, Error, TextSM, TextXS} from '../../typography/Typography';
 import { theme } from '@/styles/theme';
 
 type MusicItem = SpotifyTrack | SpotifyAlbum | SpotifyArtist | SpotifyPlaylist;
@@ -85,7 +85,7 @@ const BoxMusicList: React.FC<BoxMusicListProps> = ({ data, title, type, name }) 
 
   return (
     <View style={styles.container}>
-      <TextXL>{title}</TextXL>
+      <TextXL fontFamily='bold'>{title}</TextXL>
       {data.length > 0 ? (
         <FlatList
           data={data}
@@ -121,20 +121,6 @@ const styles = StyleSheet.create({
   InfoBox: {
     gap: 3,
   },
-  title: {
-    // 제목 스타일
-  },
-  
-  subtitle: {
-    // 부제목 스타일
-  },
-  albumInfo: {
-    // 앨범 정보 스타일
-  },
-  noDataMessage: {
-    // 데이터 없음 메시지 스타일
-  },
-  // 추가 스타일...
 });
 
 export default BoxMusicList;
